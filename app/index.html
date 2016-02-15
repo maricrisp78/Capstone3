@@ -14,13 +14,13 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
-  <body ng-app="projectsApp">
+  <body ng-app="Capstone3">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="header">
+    <!-- <div class="header">
       <div class="navbar navbar-default" role="navigation">
         <div class="container">
           <div class="navbar-header">
@@ -30,9 +30,9 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </button>
+            </button> -->
 
-            <a class="navbar-brand" href="#/">projects</a>
+           <!--  <a class="navbar-brand" href="#/">projects</a>
           </div>
 
           <div class="collapse navbar-collapse" id="js-navbar-collapse">
@@ -42,20 +42,117 @@
               <li><a ng-href="#/about">About</a></li>
               <li><a ng-href="#/">Contact</a></li>
             </ul>
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
+
+
+  <br>
+
+
+  <img class="wordword" src="images/wordS.png" style="width: 400px;height: auto" >
+    
+ 
+<div class="wordbox">
+    <input type="text" class="list wordbox" method="get" minlength="2" ng-model="list" placeholder="What's the word?" required>
+  </lable>       
+
+
+          <button class="btn btn-lg btn-primary" ng-click="findWord()">Look it up!</button>
+
+</div>
+
+
+ <div>
+         <button class="savedWords" id="btn btn-lg btn-primary">Saved Words</button> 
+
+        </div> 
+
+
+</nav>
+
+
+<aside id="social">
+  <!-- <p class="follow">Follow Us</p> -->
+    
+  <a href="https://twitter.com">
+    <img src='images/social/twittericon.png' style="width: 55px;height: auto;"></a>  
+  <a href="http://facebook.com">
+    <img src='images/social/facebookicon.png' style="width: 55px;height: auto;"></a> 
+  <a href="https://instagram.com">
+    <img src='images/social/instagramicon.png' style="width: 55px;height: auto;"></a> 
+  <a href="mailto:marieashley_78@hotmail.com">
+    <img src='images/social/emailicon.png' style="width: 55px;height: auto;"></a> 
+    
+ </aside> 
+
+
+<div class="sect sectONE">
+<!-- <img src="images/greenbike_copy.png" style="heigth: 100%; width: 100%;" > -->
+</div>
+
+<div class="subsection">
+<p class="specialword1">      
+  <strong>YUGE</strong>
+  <br>
+  <br>
+    
+  A variation of the word HUGE commonly used by Donald Trump.
+    
+  <br>
+  <br>  
+  ....Hey Don, are you building that tower across 5th Avenue? 
+    
+  <br>
+  <br>  
+  ....Donald Trump: Yes, it's going to be YUGE!!
+    
+  <br>
+<br>
+
+  <script>
+$( ".specialword1" ).click(function() {
+  $( this ).slideUp();
+});
+</script>
+  </p>
+
+</div>
+
+<div class="sect sectTWO">
+
+<!-- <img src="images/thailand.png" style="heigth: 100%; width: 100%;" > -->
+
+
+</div>
+<div class="subsection"></div>
+<div class="sect sectTHREE">
+<!-- <img src="images/sunset.png" style="heigth: 100%; width: 100%;" > -->
+</div>
+
+</div>
+<div class="subsection"></div>
+<div class="sect sectFOUR">
+
+<!-- <img src="images/Burano-Italy.png" style="heigth: 100%; width: 100%;" > -->
+
+</div>
+
+<div class="subsection"></div>
+
+
 
     <div class="container">
     <div ng-view=""></div>
     </div>
 
     <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+   
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=WhatTheFFacts%20" data-widget-id="692891429878693888">Tweets about WhatTheFFacts </a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<p class="copyright">&copy Marictionary</p>
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->

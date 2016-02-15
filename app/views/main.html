@@ -1,23 +1,55 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid!<span class="glyphicon glyphicon-ok"></span></a></p>
-</div>
 
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
 
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
 
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+
+<!-- <p>
+<button class="btn btn-lg btn-primary" ng-click="lookUp()">Look it up!</button>
+</p>
+
+<input type="text" >
+
+</input> -->
+
+
+
+
+
+        <br>
+
+        <!-- {{wordsFound.list[0].definition}} -->
+        <ul class="wordresults">
+          <li ng-animate="'animate'" ng-repeat="word in wordsFound.list | limitTo: 7">
+             <strong>{{word.list}}</strong> | 
+
+             {{word.list}},
+             {{word.definition}} <br>
+            {{word.definition[0].example}} 
+            {{word.definition[0].thumbsup}}  <br>
+            {{word.definition[0].thumbsdown}} <br>
+            <!-- {{word.thumbnail}} -->
+           
+<br>
+           <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Save Word</button>
+<br>
+             <br>
+          </li>
+
+        </ul>
+
+      </div>
+
+      <div ng-if="searchQuery">
+        <p class="lead">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p>
+
+
+
+
+
+<div ng-if="storage.savedWords">
+  <h2>Saved Words</h2>
+  <ul class="saved-words-list">
+    <li ng-repeat="word in storage.savedWords">
+      <a ng-href="/#/wordSearch/{{word.list}}" class="btn btn-lg btn-primary">{{word.list}}</a>
+    </li>
+  </ul>
 </div>

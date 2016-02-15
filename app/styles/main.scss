@@ -10,6 +10,18 @@ $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/boots
   padding: 0.2em 0;
 }
 
+
+* {
+  margin: 0px;
+  
+}
+
+html, body {
+  margin: 0px;
+  background-color: bisque;
+  height: 100%;
+}
+
 body {
   padding: 0;
 }
@@ -20,6 +32,63 @@ body {
 .footer {
   padding-left: 15px;
   padding-right: 15px;
+  margin-top: -200px;
+}
+
+
+/*nav {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  background-color: rgba (0, 0, 0, 5);
+  z-index: 99;
+  text-align: center;
+}*/
+
+.sect {
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.subsection {
+  height: 40%;
+  background-color: bisque;
+
+}
+
+
+.sectONE {
+  background-image: url('../images/oldschoolvan.png');
+}
+
+.sectTWO {
+  background-image: url('../images/greenbike_copy.png');
+}
+
+.sectTHREE {
+    background-image: url('../images/canl.png');
+}
+
+.sectFOUR {
+    background-image: url('../images/thailand.png');
+}
+
+nav a {
+  margin-left: 30px;
+  color: black;
+  padding: 10px;
+  background-color: blue;
+  text-decoration: none;
+  line-height: 50px;
+  
+}
+
+#social {
+  margin-bottom: 50px;
+
+
 }
 
 /* Custom page header */
@@ -47,25 +116,52 @@ body {
   margin: 30px 0;
 }
 
-/* Main marketing message and sign up button */
-.jumbotron {
+
+
+.copyright {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+  margin-top: 100px;
 }
 
-/* Supporting marketing content */
-.marketing {
-  margin: 40px 0;
-
-  p + h4 {
-    margin-top: 28px;
-  }
+.wordword {
+  margin-left: 520px;
 }
+
+.wordbox {
+  width: 40%;
+  height: 15%;
+  margin-left: 300px;
+  margin-top: 30px;
+
+}
+
+.btn-primary {
+  width: 120px;
+  height: 40px;
+  margin-bottom: 40px;
+  margin-left: 355px;
+  margin-top: 30px;
+
+}
+
+.savedWords {
+  color: white;
+  margin-right: 80px;
+  margin-bottom: 30px;
+  background-color: blue;
+  padding: 10px;
+  
+}
+
+.list {
+   width: 250px;
+   margin-right: 10px;
+  height: 42px;
+  text-align: center;
+
+}
+
+
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

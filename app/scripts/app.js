@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('projectsApp', [
+  .module('Capstone3', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
