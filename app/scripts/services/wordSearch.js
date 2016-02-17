@@ -2,21 +2,18 @@
 
 /**
  * @ngdoc service
- * @name angularJsApp.citysearch
+ * @name Capstone3
  * @description
  * # citysearch
- * Factory in the angularJsApp.
+ * Factory in the Capstone3.
  */
 angular.module('Capstone3')
   .factory('wordsearch', function ($resource) {
   
-    // Service logic
-    // ...
 
-    // Public API here
 
     return $resource(
-      'http://api.urbandictionary.com/v0/define?term=dumb', {},
+      'http://api.urbandictionary.com/v0/define?term=:term', {},
       {
         find: {
           method: 'GET',

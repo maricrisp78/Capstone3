@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name angularJsApp.controller:SavedhikesCtrl
+ * @name Capstone3.controller:SavedwordsCtrl
  * @description
- * # SavedhikesCtrl
- * Controller of the angularJsApp
+ * # SavedwordssCtrl
+ * Controller of the Capstone3
  */
 angular.module('Capstone3')
   .controller('SavedwordsCtrl', function ($scope, $localStorage) {

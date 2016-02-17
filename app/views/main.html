@@ -18,14 +18,14 @@
 
         <!-- {{wordsFound.list[0].definition}} -->
         <ul class="wordresults">
-          <li ng-animate="'animate'" ng-repeat="word in wordsFound.list | limitTo: 7">
-             <strong>{{word.list}}</strong> | 
+          <li ng-animate="'animate'" ng-repeat="word in wordsFound.list | limitTo: 3">
+             <strong>{{list.word}}</strong> | 
 
-             {{word.list}},
-             {{word.definition}} <br>
-            {{word.definition[0].example}} 
-            {{word.definition[0].thumbsup}}  <br>
-            {{word.definition[0].thumbsdown}} <br>
+             {{list.word}},
+             {{list.definition}} <br>
+            {{list.word[0].example}} 
+            {{list.word[0].thumbsup}}  <br>
+            {{list.word[0].thumbsdown}} <br>
             <!-- {{word.thumbnail}} -->
            
 <br>

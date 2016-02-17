@@ -2,10 +2,10 @@
 
 /**
  * @ngdoc function
- * @name angularJsApp.controller:MainCtrl
+ * @name Capstone3.controller:MainCtrl
  * @description
  * # MainCtrl
- * Controller of the angularJsApp
+ * Controller of the Capstone3
  */
 
 

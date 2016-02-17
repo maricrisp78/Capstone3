@@ -2,14 +2,14 @@
 
 /**
  * @ngdoc overview
- * @name projectsApp
+ * @name Capstone3
  * @description
- * # projectsApp
+ * # Capstone3
  *
  * Main module of the application.
  */
 angular
-  .module('Capstone3', [
+  .module('projectsApp', [
     'ngAnimate',
     'ngAria',
     'ngCookies',

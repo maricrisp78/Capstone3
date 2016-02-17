@@ -60,7 +60,7 @@ body {
 
 
 .sectONE {
-  background-image: url('../images/oldschoolvan.png');
+  background-image: url('../images/thailand.png');
 }
 
 .sectTWO {
@@ -72,7 +72,7 @@ body {
 }
 
 .sectFOUR {
-    background-image: url('../images/thailand.png');
+    background-image: url('../images/oldschoolvan.png');
 }
 
 nav a {
@@ -86,9 +86,14 @@ nav a {
 }
 
 #social {
+
+  margin-top: -430px;
   margin-bottom: 50px;
 
+}
 
+#social li {
+  padding: 5px;
 }
 
 /* Custom page header */
@@ -130,8 +135,9 @@ nav a {
 .wordbox {
   width: 40%;
   height: 15%;
-  margin-left: 300px;
+  margin-left: 295px;
   margin-top: 30px;
+  border: 3px solid #02E3D4;
 
 }
 
@@ -139,18 +145,35 @@ nav a {
   width: 120px;
   height: 40px;
   margin-bottom: 40px;
-  margin-left: 355px;
-  margin-top: 30px;
+  margin-left: 660px;
+  margin-top: 5px;
+
+}
+
+.wordresults {
+  text-decoration: none;
+  color: #AD742A;
+  list-style-type: none;
+  margin-bottom: 50px;
 
 }
 
 .savedWords {
+  width: 20%;
   color: white;
-  margin-right: 80px;
+  margin-left: 560px;
+  margin-top: 20px;
   margin-bottom: 30px;
   background-color: blue;
   padding: 10px;
   
+}
+
+.wordresults {
+  background-color: blue;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
 }
 
 .list {
