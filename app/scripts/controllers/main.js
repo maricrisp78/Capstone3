@@ -13,15 +13,16 @@
 angular.module('Capstone3')
   .controller('MainCtrl', function ($scope, wordSearch, $localStorage) {
 
-    $scope.findWord = function(){
-        $scope.wordFound = wordSearch.find({
-             term: $scope.list
-       
+
+    $scope.findWords = function(){
+    	console.log('clicking here');
+        $scope.wordsFound = wordSearch.find({
+             query: $scope.word
         });
     };
 
 
-    $scope.saveWord = function(word){
+    $scope.saveWords = function(word){
         if (!$localStorage.savedWords){
             $localStorage.savedWords = [];
         

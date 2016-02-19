@@ -11,21 +11,36 @@
 </input> -->
 
 
+        <p>
+  
+          <label class="Location">Word.
+            <input type="text" name="word" method="get" minlength="2" ng-model="word" placeholder="What's the word?" required>
+          </label>
+        </p>
+   
+      
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="findWords()">Look it up!</button>
+        </p>
 
+        <p>
+          <a href="#/savedHikes" class="savedWords" id="btn btn-lg btn-primary">Saved Hikes</a>
+        </p>
 
+        <br>
 
         <br>
 
         <!-- {{wordsFound.list[0].definition}} -->
         <ul class="wordresults">
           <li ng-animate="'animate'" ng-repeat="word in wordsFound.list | limitTo: 3">
-             <strong>{{list.word}}</strong> | 
+             <strong>{{word.word}}</strong> | 
 
-             {{list.word}},
-             {{list.definition}} <br>
-            {{list.word[0].example}} 
-            {{list.word[0].thumbsup}}  <br>
-            {{list.word[0].thumbsdown}} <br>
+             {{word.word}},
+             {{word.definition}} <br>
+            {{word.definition[0].example}} 
+            {{word.word[0].thumbsup}}  <br>
+            {{word.word[0].thumbsdown}} <br>
             <!-- {{word.thumbnail}} -->
            
 <br>
@@ -46,7 +61,7 @@
 
 
 <div ng-if="storage.savedWords">
-  <h2>Saved Words</h2>
+  <h2>Favorite Words</h2>
   <ul class="saved-words-list">
     <li ng-repeat="word in storage.savedWords">
       <a ng-href="/#/wordSearch/{{word.list}}" class="btn btn-lg btn-primary">{{word.list}}</a>

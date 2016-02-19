@@ -8,12 +8,12 @@
  * Factory in the Capstone3.
  */
 angular.module('Capstone3')
-  .factory('wordsearch', function ($resource) {
+  .factory('wordSearch', function ($resource) {
   
 
 
     return $resource(
-      'http://api.urbandictionary.com/v0/define?term=:term', {},
+      'https://mashape-community-urban-dictionary.p.mashape.com/define?term=:query', {},
       {
         find: {
           method: 'GET',
@@ -21,10 +21,12 @@ angular.module('Capstone3')
             'X-Mashape-Key': 'zEe48mTpJumshw1QLLrbFi4g6huSp1AoAgBjsnsYqmtxr90Wqm'
           },
           params: {
-            term: ''
-          }
+            query: ''
+          },
+        isArray: false
         }
       }
     );
 
   });
+

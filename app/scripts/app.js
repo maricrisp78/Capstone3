@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-  .module('projectsApp', [
+  .module('Capstone3', [
     'ngAnimate',
     'ngAria',
     'ngCookies',
@@ -17,7 +17,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
+    'ngStorage',
     'ngTouch'
+
   ])
   .config(function ($routeProvider) {
     $routeProvider
