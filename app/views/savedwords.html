@@ -10,10 +10,10 @@
           <li ng-repeat="word in storage.savedWords | limitTo: 15">
              <strong>{{word.list}}</strong> | 
 
-             {{word.list}},
+             {{word.word}},
              {{word.definition}} <br>
-            {{word.list[0].definition}} 
-            {{word.definition[0].example}}  <br>
+            {{word.definition[0].example}} 
+            {{word.definition[0].thubmsup}}  <br>
       
         </ul>
 
