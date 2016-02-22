@@ -2,17 +2,31 @@
 <div class="wordlookup">
         
   
-      <p>
+  <p>
+          <label class="Wordbox">Look up.... 
+            <input type="text" name="word" method="get" minlength="2" ng-model="word" 
+            placeholder="What's the Word?" required>
+          </label>
+        </p>
+   
+      
+        <p>
+          <button class="btn btn-lg btn-primary" ng-click="findWords()">Look it up!</button>
+
+
+
+     <!--  <p>
           <label class="wordbox">Look up... 
             <input type="text" name="word" method="get" minlength="2" ng-model="word" placeholder="What's the word?" required>
           </label>
       </p>
 
         
-          <button class="btn btn-lg btn-primary" ng-click="findWords()">Look it up!</button>
+          <button class="btn btn-lg btn-primary" ng-click="findWords()">Look it up!</button> -->
        
 
   </div>
+
 
 
 <!-- <p>
@@ -41,9 +55,12 @@
             <!-- {{word.thumbnail}} -->
            
 <br>
-           <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button>
-<br>
-             <br>
+          
+        
+          <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button>
+
+
+     <br>
           </li>
 
         </ul>
