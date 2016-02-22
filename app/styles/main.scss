@@ -87,7 +87,7 @@ nav a {
 
 #social {
 
-  margin-top: -430px;
+  margin-top: -200px;
   margin-bottom: 50px;
 
 }
@@ -147,34 +147,41 @@ iframe {
   margin-left: 520px;
 }
 
-.wordbox {
-  width: 40%;
+.wordlookup {
+  width: 60%;
   height: 15%;
-  margin-left: 295px;
-  margin-top: 30px;
-  border: 3px solid #02E3D4;
+  margin-left: 140px;
+  margin-top: -4000px;
+  /*border: 3px solid #02E3D4;*/
+  text-align: center;
+  background-color: #1BC7DE;
+  padding: 10px;
+  border-radius: 5px;
+
 
 }
 
-.btn-primary {
+
+/*.btn-primary {
   width: 120px;
   height: 40px;
   margin-bottom: 40px;
-  margin-left: 660px;
-  margin-top: 5px;
+  margin-left: 460px;
+  margin-top: -50px;
+  text-align: center;
 
-}
+}*/
 
-.wordresults {
+/*.wordresults {
   text-decoration: none;
   color: #5E0A1A;
   list-style-type: none;
   margin-bottom: 50px;
-  margin-top: -700px;
+  margin-top: -70px;
   height: 300px;
 
 
-}
+}*/
 
 .savedWords {
   width: 20%;
@@ -187,12 +194,12 @@ iframe {
   
 }
 
-.wordresults {
+/*.wordresults {
   background-color: blue;
   font-size: 20px;
   color: white;
   padding: 10px;
-}
+}*/
 
 .list {
    width: 250px;
