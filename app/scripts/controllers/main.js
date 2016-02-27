@@ -9,6 +9,28 @@
  */
 
 
+// $( document ).ready(function() {
+    
+//     var userInfo = {
+//         firstName: '',
+//         lastName: ''
+//     };
+// };
+
+// $('#login-form a').on('click', function() {
+//         $('#login-form').show();
+//         $('.navbar-right user-info').hide();
+//         $('.user-fullname').text(userInfo.firstName + ' ' + userInfo.lastName);
+
+// $('.btn-sm').on('click', function() {
+//         $('.btn btn-default btn-sm').hide();
+//         $('#login-form').show();
+//         $('.navbar-right user-info').hide() ++;
+        
+//     });
+//     }); 
+
+
 
 angular.module('Capstone3')
   .controller('MainCtrl', function ($scope, wordSearch, $localStorage) {
@@ -22,7 +44,7 @@ angular.module('Capstone3')
     };
 
 
-    $scope.saveWords = function(word){
+    $scope.saveWord = function(word){
         if (!$localStorage.savedWords){
             $localStorage.savedWords = [];
         
@@ -51,24 +73,16 @@ angular.module('Capstone3')
 
   });
 
-// $( document ).ready(function() {
-
-// var userInfo = {
-//     username: ' guest'
-
-// };
-
-
-//     $('#login-form').on('click', function() {
-//         $('#login-form').hide();
-//         $('.user-info').show();
-//         $('.username').text(userInfo.username);
-
-//     $('.submit').on('click', function() {
-//         $('.submit').show();
-//         $('#login-form').hide();
-//         $('.user-info').hide() ++;
+$(function() {
+    $(".menu-trigger").click(function() {
+        $(".navbar").slideToggle(400, function() {
+        $(this).toggleClass("nav-expanded").css('display', '');
         
-//     });
-// });
-// });
+        
+    });
+    
+});
+
+
+});
+

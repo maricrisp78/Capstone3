@@ -26,6 +26,47 @@ body {
   padding: 0;
 }
 
+
+.wordword {
+  margin-left: 520px;
+}
+
+.wordlookup {
+  margin-left: 100px;
+  margin-top: -3200px; 
+  background-color: #1BC7DE;
+  padding: 35px;
+  border-radius: 5px;
+
+ }
+
+
+.lookupbutton {
+  margin-left: 10px;
+
+}
+
+
+.wordresults {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  background-color: #616769;
+  list-style-type: none;
+  height: 100%;
+  margin: 30px auto;
+
+
+
+}
+
+
+.saveword {
+  margin-top: -35px;
+  margin-bottom: 30px;
+  color: black;
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -36,17 +77,22 @@ body {
 }
 
 
-/*nav {
-  position: fixed;
+.saved {
+  background-color: purple;
+  font-size: 30px;
+}
+
+.nav.navbar-nav {
+  position: relative;
   height: 50px;
-  width: 100%;
+  width: 30%;
   background-color: rgba (0, 0, 0, 5);
   z-index: 99;
   text-align: center;
-}*/
+}
 
 .sect {
-  height: 100%;
+  height: 80%;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -58,7 +104,36 @@ body {
 
 }
 
+.subscribe {
+  background-color: #0DC16F;
+  width: 40%;
+  text-align: center;
+  margin-left: 400px;
+  border-radius: 10px;
+  padding: 10px;
 
+}
+
+.subscribenow {
+  font-size: 20px;
+
+}
+
+.submit {
+  margin-top: 20px;
+
+}
+
+.h2 {
+  color: purple;
+  font-size: 40px;
+}
+
+
+.namebox {
+  margin-bottom: -20px;
+
+}
 .sectONE {
   background-image: url('../images/thailand.png');
 }
@@ -75,20 +150,12 @@ body {
     background-image: url('../images/oldschoolvan.png');
 }
 
-nav a {
-  margin-left: 30px;
-  color: black;
-  padding: 10px;
-  background-color: blue;
-  text-decoration: none;
-  line-height: 50px;
-  
-}
 
 #social {
 
   margin-top: -200px;
   margin-bottom: 50px;
+  display: block;
 
 }
 
@@ -128,10 +195,10 @@ iframe {
 
 }
 
-.container-narrow > hr {
+/*.container-narrow > hr {
   margin: 30px 0;
 }
-
+*/
 .twitter {
 
 }
@@ -143,70 +210,15 @@ iframe {
   margin-top: 100px;
 }
 
-.wordword {
-  margin-left: 520px;
-}
-
-.wordlookup {
-  width: 60%;
-  height: 15%;
-  margin-left: 140px;
-  margin-top: -4200px;
-  text-align: center;
-  background-color: #1BC7DE;
-  padding: 10px;
-  border-radius: 5px;
 
 
-}
-
-
-.btn-primary {
-  width: 120px;
-  height: 40px;
-  margin-bottom: 40px;
-  margin-left: 460px;
-  margin-top: -50px;
-  text-align: center;
-
-}
-
-/*.wordresults {
-  text-decoration: none;
-  color: #5E0A1A;
-  list-style-type: none;
-  margin-bottom: 50px;
-  margin-top: -70px;
-  height: 300px;
-
-
-}*/
-
-.savedWords {
-  width: 40%;
-  height: 70%;
-  margin-left: 560px;
-  margin-top: 20px;
-  margin-bottom: 30px;
-  background-color: #52EAF2;
-  padding: 10px;
-  
-}
-
-/*.wordresults {
-  background-color: blue;
-  font-size: 20px;
-  color: white;
-  padding: 10px;
-}*/
-
-.list {
+/*.list {
    width: 250px;
    margin-right: 10px;
   height: 42px;
   text-align: center;
 
-}
+}*/
 
 
 

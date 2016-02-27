@@ -1,14 +1,14 @@
+<div>
+
+    <p class="saved">SAVED WORDS</p>
+</div>
 
 
- <div>
-         <button class="savedWords" id="btn btn-lg btn-primary">Saved Words</button> 
-
-        </div> 
 <div>
 
      <ul class="wordresults">
           <li ng-repeat="word in storage.savedWords | limitTo: 15">
-             <strong>{{word.list}}</strong> | 
+             <strong>{{word.word}}</strong> |
 
              {{word.word}},
              {{word.definition}} <br>

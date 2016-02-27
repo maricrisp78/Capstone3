@@ -12,9 +12,31 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+
+
     <!-- endbuild -->
+  <header>
+ <nav class="collapse navbar-collapse" id="js-navbar-collapse">
+
+     <ul class="nav navbar-nav">
+          <li class="active"><a href="#/">Home</a></li>
+          <li class="aboutnav"><a ng-href="#/about">About</a></li>
+  
+     </ul>
+ </nav>
+
+  </header>
+ 
+
   </head>
+
+
   <body ng-app="Capstone3">
+
+
+
+
+
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -54,19 +76,6 @@
   <img class="wordword" src="images/wordS.png" style="width: 400px;height: auto" >
     
  
-<!-- <div class="wordbox">
-    <input type="text" class="list wordbox" method="get" minlength="2" ng-model="list" placeholder="What's the word?" required>
-  </lable>       
-
-</div>
-          <button class="btn btn-lg btn-primary" ng-click="findWords()">Look it up!</button>
-
- -->
-
-
- 
-
-
 </nav>
 
 
@@ -86,17 +95,13 @@
 
 
 <div class="sect sectONE">
-<!-- <img src="images/greenbike_copy.png" style="heigth: 100%; width: 100%;" > -->
+
 </div>
 
 <div class="subsection">
 
-<div>
-         <button class="savedWords" id="btn btn-lg btn-primary">Favorite Words</button> 
 
-        </div> 
-
-<!-- <p class="specialword1">      
+<p class="specialword1">      
   <strong>YUGE</strong>
   <br>
   <br>
@@ -110,7 +115,7 @@
   <br>
   <br>  
   ....Donald Trump: Yes, it's going to be YUGE!!
-     -->
+    
   <br>
 <br>
 <!-- 
@@ -123,24 +128,68 @@ $( ".specialword1" ).click(function() {
 
 </div>
 
-<div class="sect sectTWO">
+<div class="sect sectTWO"></div>
 
-<!-- <img src="images/thailand.png" style="heigth: 100%; width: 100%;" > -->
+
+<div class="subsection">
+
+<br><br>
+
+
+<div id="form">
+  <div class="subscribe">
+    <p class="subscribenow">Subscribe to our site!</p>
+    
+   
+    
+    <form class="registration" method="get" action="thankyou.html" onsubmit="javascript:return validate ('registration', 'email');" >
+      
+      <p>
+      <label class="name"> Your Name <span> (required, atleast 2 characters) </span></label>
+        <br>
+      <input id="name" class="namebox" minlength="2" maxlength="128" type="text" placeholder=" Your Name" required>
+    </p>
+    
+    </br>
+    <p>
+      <label class="email"> Your Email <span> (valid email required) </span></label>
+      <br>
+      
+      <input id="email" name="email" minlength="@" maxlength="28" type="text" placeholder=" Enter your email" required>
+      
+      <br>
+    
+  
+      <input class="submit" type="submit" value="submit"/>  
+      
+    
+      <br/>
+      
+    </p>
+  
+      <!--<button class="register">Register</button> -->
+      
+           
+    </form>
+  </div>
+</div>  
+  
+</div>
+
+</div>
 
 
 </div>
+
+
+
+<div class="sect sectTHREE"></div>
+
+
 <div class="subsection"></div>
-<div class="sect sectTHREE">
-<!-- <img src="images/sunset.png" style="heigth: 100%; width: 100%;" > -->
-</div>
 
-</div>
-<div class="subsection"></div>
-<div class="sect sectFOUR">
+<div class="sect sectFOUR"></div>
 
-<!-- <img src="images/Burano-Italy.png" style="heigth: 100%; width: 100%;" > -->
-
-</div>
 
 <div class="subsection"></div>
 
@@ -151,11 +200,11 @@ $( ".specialword1" ).click(function() {
     </div>
 
 
-<div>
+<!-- <div>
 
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.8031808435917!2d-122.35640368436535!3d47.7270689791928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490113272b0c467%3A0x102fa7323b76063e!2s13426+Greenwood+Ave+N%2C+Seattle%2C+WA+98133!5e0!3m2!1sen!2sus!4v1454039442993" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 
-</div>
+</div> -->
 
 
 <div>
@@ -168,8 +217,10 @@ $( ".specialword1" ).click(function() {
     <div class="footer">
 
    
-<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=WhatTheFFacts%20" data-widget-id="692891429878693888">Tweets about WhatTheFFacts </a>
-<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=WhatTheFFacts%20" data-widget-id="692891429878693888">Tweets about WhatTheFFacts </a> -->
+
+
+<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 
@@ -208,6 +259,7 @@ $( ".specialword1" ).click(function() {
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/services/wordSearch.js"></script>
+        <script src="scripts/controllers/savedWords.js"></script>
         <!-- endbuild -->
 </body>
 </html>

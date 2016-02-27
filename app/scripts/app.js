@@ -33,6 +33,16 @@ angular
         controller: 'AboutCtrl',
         controllerAs: 'about'
       })
+      .when('/savedWords', {
+        templateUrl: 'views/savedwords.html',
+        controller: 'SavedwordsCtrl',
+        controllerAs: 'savedWords'
+      })
+      .when('/savedWords', {
+        templateUrl: 'views/savedwords.html',
+        controller: 'SavedwordsCtrl',
+        controllerAs: 'savedWords'
+      })
       .otherwise({
         redirectTo: '/'
       });
