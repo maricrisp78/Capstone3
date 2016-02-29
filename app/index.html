@@ -12,18 +12,26 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.css" />
 
 
     <!-- endbuild -->
   <header>
- <nav class="collapse navbar-collapse" id="js-navbar-collapse">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
 
-     <ul class="nav navbar-nav">
-          <li class="active"><a href="#/">Home</a></li>
-          <li class="aboutnav"><a ng-href="#/about">About</a></li>
-  
-     </ul>
- </nav>
+  <ul>
+    <li> 
+      <a href="index.html">Home</a>
+    </li>
+    <li> 
+      <a href="views/about.html">About</a>
+    </li>
+
+
+  </ul>
+  </div>
+</nav>
 
   </header>
  
@@ -35,47 +43,20 @@
 
 
 
-
-
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <!-- <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button> -->
-
-           <!--  <a class="navbar-brand" href="#/">projects</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#/">Home</a></li>
-              <li><a ng-href="#/about">About</a></li>
-              <li><a ng-href="#/">Contact</a></li>
-            </ul>
-          </div> -->
-        </div>
-      </div>
-    </div>
-
+    
 
   <br>
 
 
-  <img class="wordword" src="images/wordS.png" style="width: 400px;height: auto" >
+  <img class="wordword rubberBand animated" src="images/wordS.png" style="width: 400px;height: auto" >
     
  
+
 </nav>
 
 
@@ -100,7 +81,9 @@
 
 <div class="subsection">
 
+<ul class="specialwords">
 
+  <li>
 <p class="specialword1">      
   <strong>YUGE</strong>
   <br>
@@ -117,14 +100,40 @@
   ....Donald Trump: Yes, it's going to be YUGE!!
     
   <br>
-<br>
-<!-- 
-  <script>
-$( ".specialword1" ).click(function() {
-  $( this ).slideUp();
-});
-</script> -->
-  </p> 
+  <br>
+
+  </li>
+
+  <li>
+
+<p class="specialword2">      
+  <strong>YUGE</strong>
+  <br>
+  <br>
+    
+  A variation of the word HUGE commonly used by Donald Trump.
+    
+  <br>
+  <br>  
+  ....Hey Don, are you building that tower across 5th Avenue? 
+    
+  <br>
+  <br>  
+  ....Donald Trump: Yes, it's going to be YUGE!!
+    
+  <br>
+  <br>
+
+  </li>
+  
+</ul>
+
+
+</p> 
+
+
+
+</p> 
 
 </div>
 
@@ -142,7 +151,7 @@ $( ".specialword1" ).click(function() {
     
    
     
-    <form class="registration" method="get" action="thankyou.html" onsubmit="javascript:return validate ('registration', 'email');" >
+    <form class="registration" method="get" action="views/thankyou.html" onsubmit="javascript:return validate ('registration', 'email');" >
       
       <p>
       <label class="name"> Your Name <span> (required, atleast 2 characters) </span></label>
@@ -186,12 +195,30 @@ $( ".specialword1" ).click(function() {
 <div class="sect sectTHREE"></div>
 
 
-<div class="subsection"></div>
+<div class="subsection">
+
+<a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=WhatTheFFacts%20" data-widget-id="692891429878693888">Tweets about WhatTheFFacts </a>
+
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+
+</div>
 
 <div class="sect sectFOUR"></div>
 
 
-<div class="subsection"></div>
+<div class="subsection">
+
+<div>
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.8031808435917!2d-122.35640368436535!3d47.7270689791928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490113272b0c467%3A0x102fa7323b76063e!2s13426+Greenwood+Ave+N%2C+Seattle%2C+WA+98133!5e0!3m2!1sen!2sus!4v1454039442993" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+</div>
+
+
+
+</div>
 
 
 
@@ -200,11 +227,6 @@ $( ".specialword1" ).click(function() {
     </div>
 
 
-<!-- <div>
-
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2683.8031808435917!2d-122.35640368436535!3d47.7270689791928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490113272b0c467%3A0x102fa7323b76063e!2s13426+Greenwood+Ave+N%2C+Seattle%2C+WA+98133!5e0!3m2!1sen!2sus!4v1454039442993" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-
-</div> -->
 
 
 <div>
@@ -217,16 +239,13 @@ $( ".specialword1" ).click(function() {
     <div class="footer">
 
    
-<!-- <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/search?q=WhatTheFFacts%20" data-widget-id="692891429878693888">Tweets about WhatTheFFacts </a> -->
-
-
-<!-- <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
 
 
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID
      <script>
        !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
        (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
@@ -237,7 +256,7 @@ $( ".specialword1" ).click(function() {
        ga('send', 'pageview');
     </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
+    <!-- build:js(.) scripts/vendor.js
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>

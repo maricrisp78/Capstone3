@@ -1,7 +1,4 @@
-<div>
-
-    <p class="saved">SAVED WORDS</p>
-</div>
+<p class="Favorites">Favorite Words</p>
 
 
 <div>
@@ -10,11 +7,17 @@
           <li ng-repeat="word in storage.savedWords | limitTo: 15">
              <strong>{{word.word}}</strong> |
 
-             {{word.word}},
-             {{word.definition}} <br>
+            {{word.word}},
+            {{word.definition}} <br>
             {{word.definition[0].example}} 
-            {{word.definition[0].thubmsup}}  <br>
+            {{word.word[0].thumbsup}}  <br>
+            {{word.word[0].thumbsdown}} 
+            {{word.thumbnail}} <br>
       
         </ul>
+
+<a href="#/index.html" class="backtosearch">Back to Search
+</a>        
+
 
  </div>

@@ -1,29 +1,22 @@
- 
-  <p>
-          <label class="wordlookup">Look up.... 
+ <div>
+    <label class="wordlookup">Look up.... 
             <input type="text" name="word" method="get" minlength="2" ng-model="word" 
             placeholder="What's the Word?" required></input>
 
-          
-       
-        
-        <button class="lookupbutton" ng-click="findWords()">Look it up!</button>
-
-        </label>
- </p>
-
+    
+    
+    <button class="lookupbutton" ng-click="findWords()">Look it up!</button>
+    
+    </label>
+    
   </div>      
-        <p>
-          
+     
 
-<div ng-if="searchQuery">
+  <div ng-if="searchQuery">
+        
         <p class="lead">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p>
-          </li>
-
-        </ul>
-
-      </div>
-
+  
+  </div>
 
 
         <br>
@@ -33,8 +26,8 @@
           <p ng-animate="'animate'" ng-repeat="word in wordsFound.list | limitTo: 5">
              <strong>{{word.word}}</strong> | 
 
-             {{word.word}},
-             {{word.definition}} <br>
+            {{word.word}},
+            {{word.definition}} <br>
             {{word.definition[0].example}} 
             {{word.word[0].thumbsup}}  <br>
             {{word.word[0].thumbsdown}} 
@@ -43,16 +36,21 @@
             <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button>
 
 
+
+        <p>
+          <a href="#/savedWords" class="savedWords" id="btn btn-lg btn-primary">Favorite Words</a>
+        </p>
+
+
+
       <div ng-if="storage.savedWords">
         <h2>Favorite Words</h2>
         <ul class="saved-words-list">
           <li ng-repeat="word in storage.savedWords">
-         <!--    <a ng-href="/#/current/{{word.word}}" class="btn btn-lg btn-primary">{{word.word}}</a> -->
+            <a ng-href="/#/current/{{word.word}}" class="btn btn-lg btn-primary">{{word.word}}</a>
           </li>
         </ul>
       </div>
-
-
 
 
 
