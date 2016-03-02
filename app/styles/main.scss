@@ -48,6 +48,7 @@ body {
   list-style-type: none;
   color: white;
   float: left;
+  box-shadow: 0 5px 10px rgba(40, 42, 41, 0.50);
 }
 
 .navbar-fixed-top ul li {
@@ -57,15 +58,26 @@ body {
   display: inline;
   float: left;
   margin-top: 20px;
+  position: relative;
+  transition: .25s linear;
+
 }
 
 .navbar-fixed-top a {
   color: white;
   text-decoration: none;
   list-style-type: none;
-  margin-left: 100px;
-  margin-right: 50px;
+  margin-left: 130px;
+  margin-right: -20px;
 
+
+}
+
+.navbar-fixed-top a:hover {
+  background-color: #1BC7DE;
+  padding: 12px;
+  border-radius: 4px;
+  transition: .25s linear; 
 }
 
 .wordresults {
@@ -82,12 +94,25 @@ body {
 
 }
 
-.specialwords {
-  
+.specialword1 {
+  background-color: gray;
+  padding: 10px;
   margin-left: 20px;
+  margin-top: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  width: 40%;
 }
 
-
+.specialword2 {
+  background-color: bisque;
+  padding: 10px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  text-decoration: none;
+  list-style-type: none;
+  width: 40%;
+}
 
 .saveword {
   margin-top: -35px;
