@@ -45,6 +45,7 @@ angular.module('Capstone3')
 
 
     $scope.saveWord = function(word){
+        console.log(word);
         if (!$localStorage.savedWords){
             $localStorage.savedWords = [];
         
@@ -56,7 +57,7 @@ angular.module('Capstone3')
 
 
             for (var i=0; i < $localStorage.savedWords.length; i++){
-                if ($localStorage.savedWords[i].unique_id === word.unique_id) {
+                if ($localStorage.savedWords[i].defid === word.defid) {
                     // This is a duplicate, so don't save (variable set to false).
                     save = false;
                 }

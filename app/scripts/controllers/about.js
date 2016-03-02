@@ -11,7 +11,8 @@ angular.module('Capstone3')
   .controller('AboutCtrl', function () {
     this.awesomeThings = [
       'HTML5 Boilerplate',
-      'AngularJS',
+      'Capstone3',
       'Karma'
     ];
   });
+
