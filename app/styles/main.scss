@@ -36,8 +36,9 @@ body {
   background-color: #1BC7DE;
   padding: 25px;
   border-radius: 5px;
-  margin-top: 220px;
+  margin-top: 120px;
   margin-left: 155px;
+  margin-bottom: -15px;
 
  }
 
@@ -69,10 +70,8 @@ body {
   color: white;
   text-decoration: none;
   list-style-type: none;
-  margin-left: 130px;
-  margin-right: -20px;
-
-
+  margin-left: 115px;
+  
 }
 
 .navbar-fixed-top a:hover {
@@ -90,7 +89,9 @@ body {
   list-style-type: none;
   margin: 100px auto;
   margin-bottom: 50px;
-/*  padding: 15px;*/
+  /*padding: 15px;*/
+  padding-left: 20px;
+  padding-right: 20px;
   border-radius: 5px;
 
 
@@ -174,14 +175,11 @@ body {
   margin-top: -210px;
 }
 
-#widgetmain {
+/*#widgetmain {
   margin-top: -200px;
   margin-left: 700px;
 }
-
-.twitter {
-  margin-right: 200px;
-}
+*/
 
 .Favorites {
   margin-top: 250px;
@@ -231,11 +229,12 @@ body {
 }
 
 .aboutpage{
-  margin-top: 250px;
+  margin-top: 150px;
   margin-bottom: 50px;
   text-decoration: none;
   list-style-type: none;
   background-color: #1BC7DE;
+  padding: 20px;
 
 }
 
@@ -275,7 +274,7 @@ a:hover {
 
 #social {
 
-  margin-top: -300px;
+  margin-top: -220px;
   margin-bottom: 50px;
   display: block;
 
@@ -300,7 +299,26 @@ a:hover {
 }
 
 /* Custom page footer */
+#scrollArea {
+  height: 10px;
 
+  margin-top: 10px;
+  color: white;
+}
+
+#bottom {
+  display: block;
+  margin-top: 5px;
+}
+
+.visitus {
+  margin-bottom: -30px;
+  color: #12070A;
+  text-align: center;
+  margin-top: 25px;
+  font-size: 20px;
+
+}
 
 iframe {
   width: 65%;
@@ -310,7 +328,7 @@ iframe {
 
 }
 
-.timeline-Widget {
+.timeline-header {
   margin-top: 50px;
 }
 

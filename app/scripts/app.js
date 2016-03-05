@@ -43,6 +43,7 @@ angular
         controller: 'SavedwordsCtrl',
         controllerAs: 'savedWords'
       })
+      .when( "/location", {} )
       .otherwise({
         redirectTo: '/'
       });
