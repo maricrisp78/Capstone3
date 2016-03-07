@@ -30,6 +30,7 @@ body {
 .wordword {
   margin-left: 520px;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
 
 .wordlookup {
@@ -37,8 +38,8 @@ body {
   padding: 25px;
   border-radius: 5px;
   margin-top: 120px;
-  margin-left: 155px;
-  margin-bottom: -15px;
+  margin-left: 157px;
+  margin-bottom: -85px;
 
  }
 
@@ -70,13 +71,17 @@ body {
   color: white;
   text-decoration: none;
   list-style-type: none;
-  margin-left: 115px;
+  margin-left: 75px;
   
+}
+
+.savedwords{
+  margin-left: 40px;
 }
 
 .navbar-fixed-top a:hover {
   background-color: #1BC7DE;
-  padding: 12px;
+  padding: 15px;
   border-radius: 4px;
   transition: 0.25s linear; 
 }
@@ -87,14 +92,13 @@ body {
   font-size: 16px;
   background-color: #1BC7DE;
   list-style-type: none;
-  margin: 100px auto;
+  margin-top: 60px;
   margin-bottom: 50px;
   /*padding: 15px;*/
   padding-left: 20px;
   padding-right: 20px;
+  /*padding-top: 5px;*/
   border-radius: 5px;
-
-
 }
 
 .specialword1 {
@@ -128,24 +132,19 @@ body {
 .marketing,
 
 
-.savedWords {
-  background-color: blue;
-  font-size: 15px;
-  color: #5BB1C0;
-  padding: 15px;
-  border-radius: 5px;
-  text-decoration: none;
+.savedwordresults {
+  margin-top: 120px;
+  margin-left: 15px;
 }
-
 
 .backtosearch {
   background-color: #1BC7DE;
-  color: #12070A;
-  padding: 15px;
+  color: black;
+  padding: 10px;
   border-radius: 5px;
   text-decoration: none;
-  margin-bottom: 30px;
-  margin-top: -30px;
+  
+  margin-left: 360px;
 }
 
 /*.nav.navbar-nav {
@@ -181,14 +180,11 @@ body {
 }
 */
 
-.Favorites {
-  margin-top: 250px;
-  margin-bottom: -20px;
-}
 
 .subscribe {
   background-color: #12070A;
   width: 40%;
+  height: 250px;
   text-align: center;
   margin-left: 200px;
   padding: 10px;
@@ -218,7 +214,6 @@ body {
 }
 
 .baracross {
-  width: 100%;
   margin: 0px;
   color: purple;
 
@@ -315,7 +310,7 @@ a:hover {
   margin-bottom: -30px;
   color: #12070A;
   text-align: center;
-  margin-top: 25px;
+  /*margin-top: 25px;*/
   font-size: 20px;
 
 }
