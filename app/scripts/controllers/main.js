@@ -9,27 +9,6 @@
  */
 
 
-// $( document ).ready(function() {
-    
-//     var userInfo = {
-//         firstName: '',
-//         lastName: ''
-//     };
-// };
-
-// $('#login-form a').on('click', function() {
-//         $('#login-form').show();
-//         $('.navbar-right user-info').hide();
-//         $('.user-fullname').text(userInfo.firstName + ' ' + userInfo.lastName);
-
-// $('.btn-sm').on('click', function() {
-//         $('.btn btn-default btn-sm').hide();
-//         $('#login-form').show();
-//         $('.navbar-right user-info').hide() ++;
-        
-//     });
-//     }); 
-
 
 
 angular.module('Capstone3')
@@ -71,19 +50,14 @@ angular.module('Capstone3')
             }
         }
     };
+    $scope.unsaveWord = function(word){
+           var wordIndex = $localStorage.savedWords.indexOf(word);
+           if (wordIndex > -1){
+             $localStorage.savedWords.splice(wordIndex, 1);
+           }
+    };
 
   });
 
-$(function() {
-    $(".menu-trigger").click(function() {
-        $(".navbar").slideToggle(400, function() {
-        $(this).toggleClass("nav-expanded").css('display', '');
-        
-        
-    });
-    
-});
 
-
-});
 

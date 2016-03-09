@@ -5759,7 +5759,7 @@ body {
   padding: 25px;
   border-radius: 5px;
   margin-top: 120px;
-  margin-left: 157px;
+  margin-left: 148px;
   margin-bottom: -85px; }
 
 .navbar-fixed-top {
@@ -5813,7 +5813,7 @@ body {
 
 .specialword1 {
   background-color: gray;
-  padding: 10px;
+  padding: 35px;
   margin-left: 50px;
   margin-top: 35px;
   text-decoration: none;
@@ -5849,6 +5849,9 @@ body {
   text-decoration: none;
   margin-left: 360px; }
 
+.backtotop {
+  margin-left: 680px; }
+
 /*.nav.navbar-nav {
   position: relative;
   height: 50px;
@@ -5869,7 +5872,7 @@ body {
 
 #video {
   margin-left: 500px;
-  margin-top: -210px; }
+  margin-top: -300px; }
 
 /*#widgetmain {
   margin-top: -200px;
@@ -5881,7 +5884,7 @@ body {
   width: 40%;
   height: 250px;
   text-align: center;
-  margin-left: 200px;
+  margin-left: 420px;
   padding: 10px;
   border: 5px solid white;
   color: white; }
@@ -5970,12 +5973,18 @@ a:hover {
   display: block;
   margin-top: 5px; }
 
+.timeline-Widget {
+  margin-top: 30px; }
+
 .visitus {
   margin-bottom: -30px;
   color: #12070A;
   text-align: center;
   /*margin-top: 25px;*/
   font-size: 20px; }
+
+.clear {
+  list-style-type: none; }
 
 iframe {
   width: 65%;

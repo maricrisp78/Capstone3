@@ -11,11 +11,17 @@
 
 <br>
 <br>
+      <a class="clear" ng-click="word = null">
+      <span class="glyphicon glyphicon-remove"></span>
+      </a> 
+
 
           <li ng-repeat="word in storage.savedWords | limitTo: 10">
              <strong>{{word.word}}</strong> |
 
-            {{word.word}},
+
+
+            {{word.word}}
             {{word.definition}} <br>
             {{word.definition.example}} 
             {{word.word[0].thumbsup}}  <br>
@@ -24,7 +30,7 @@
       
         </ul>
 
-       
+      
 
 
  </div>

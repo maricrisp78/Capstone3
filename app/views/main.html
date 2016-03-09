@@ -1,56 +1,62 @@
  
 
- <div>
-    <label class="wordlookup">Look up.... 
-      <input type="text" name="word" method="get" minlength="2" ng-model="word" placeholder="What's the Word?" required></input>
-      <button class="lookupbutton" ng-click="findWords()">Look it up!</button>
+<div>
+  <label class="wordlookup">Look up.... 
+    <!-- <input type="text" name="word" method="get" minlength="2" ng-model="word" placeholder="What's the Word?" required></input> -->
+
+    <input type="text" ng-model="word" placeholder="What's the Word?"/>
+    <a class="clear" ng-click="word = null">
+      <span class="glyphicon glyphicon-remove"></span>
+    </a>
+
+    <button class="lookupbutton" ng-click="findWords()">Look it up!</button>
 
   </label>
 </div>  
-     
 
-  <div ng-if="searchQuery">
-        
-        <p class="lead">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p>
+
+
+
+<div ng-if="searchQuery">
+
+  <p class="lead">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p>
   
-  </div>
-     <br>
-        <div> 
-
-
-
-        <ul class="wordresults">
-
-
-
-          <p ng-animate="animate" ng-repeat="word in wordsFound.list | limitTo: 5">
-             <strong>{{word.word}}</strong> | 
-
-            {{word.word}},
-            {{word.definition}} <br>
-            {{word.definition[0].example}} 
-            {{word.word[0].thumbsup}}  <br>
-            {{word.word[0].thumbsdown}} 
-            {{word.thumbnail}}      
-
-           
-            <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button> 
-
-      <div ng-if="storage.savedWords">
-        <h2>Favorite Words</h2>
-        <ul class="saved-words-list">
-          <li ng-repeat="word in storage.savedWords">
-            <a ng-href="/#/wordSearch/{{word.word}}" class="btn btn-lg btn-primary">{{word.word}}</a>
-          </li>
-        </ul>
-
-
- <a href="ndex.html" class="backtosearch">Clear
-</a>
-
-
-
 </div>
+<br>
+
+  <ul class="wordresults">
+
+
+    <p ng-animate="animate" ng-repeat="word in wordsFound.list | limitTo: 5">
+     <strong>{{word.word}}</strong> | 
+
+     {{word.word}},
+     {{word.definition}} <br>
+     {{word.definition[0].example}} 
+     {{word.word[0].thumbsup}}  <br>
+     {{word.word[0].thumbsdown}} 
+     {{word.thumbnail}}      
+
+
+
+     <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button> 
+
+
+
+
+
+     <div ng-if="storage.savedWords">
+
+      <h2>Favorite Words</h2>
+      <ul class="saved-words-list">
+        <li ng-repeat="word in storage.savedWords">
+          <a ng-href="/#/wordSearch/{{word.word}}" class="btn btn-lg btn-primary">{{word.word}}</a>
+        </li>
+
+        <p class="save-button-container"> <button class="btn btn-xs btn-default" ng-click="unsaveWord(word)">Unsave</button></p> 
+      </ul>
+
+    </div>
 
 
 
@@ -58,7 +64,7 @@
 
 
 
-      
+
 
 
 

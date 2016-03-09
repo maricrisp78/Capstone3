@@ -1,57 +1,6 @@
 'use strict';
 
 /**
- * @ngdoc overview
- * @name Capstone3
- * @description
- * # Capstone3
- *
- * Main module of the application.
- */
-angular
-  .module('Capstone3', [
-    'ngAnimate',
-    'ngAria',
-    'ngCookies',
-    'ngMessages',
-    'ngResource',
-    'ngRoute',
-    'ngSanitize',
-    'ngStorage',
-    'ngTouch'
-
-  ])
-  .config(["$routeProvider", function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .when('/savedWords', {
-        templateUrl: 'views/savedwords.html',
-        controller: 'SavedwordsCtrl',
-        controllerAs: 'savedWords'
-      })
-      .when('/savedWords', {
-        templateUrl: 'views/savedwords.html',
-        controller: 'SavedwordsCtrl',
-        controllerAs: 'savedWords'
-      })
-      .when( "/location", {} )
-      .otherwise({
-        redirectTo: '/'
-      });
-  }]);
-
-'use strict';
-
-/**
  * @ngdoc function
  * @name Capstone3.controller:MainCtrl
  * @description
@@ -59,27 +8,6 @@ angular
  * Controller of the Capstone3
  */
 
-
-// $( document ).ready(function() {
-    
-//     var userInfo = {
-//         firstName: '',
-//         lastName: ''
-//     };
-// };
-
-// $('#login-form a').on('click', function() {
-//         $('#login-form').show();
-//         $('.navbar-right user-info').hide();
-//         $('.user-fullname').text(userInfo.firstName + ' ' + userInfo.lastName);
-
-// $('.btn-sm').on('click', function() {
-//         $('.btn btn-default btn-sm').hide();
-//         $('#login-form').show();
-//         $('.navbar-right user-info').hide() ++;
-        
-//     });
-//     }); 
 
 
 
@@ -122,21 +50,16 @@ angular.module('Capstone3')
             }
         }
     };
+    $scope.unsaveWord = function(word){
+           var wordIndex = $localStorage.savedWords.indexOf(word);
+           if (wordIndex > -1){
+             $localStorage.savedWords.splice(wordIndex, 1);
+           }
+    };
 
   }]);
 
-$(function() {
-    $(".menu-trigger").click(function() {
-        $(".navbar").slideToggle(400, function() {
-        $(this).toggleClass("nav-expanded").css('display', '');
-        
-        
-    });
-    
-});
 
-
-});
 
 
 'use strict';
@@ -206,6 +129,57 @@ angular.module('Capstone3')
       
   }]);
 
+'use strict';
+
+/**
+ * @ngdoc overview
+ * @name Capstone3
+ * @description
+ * # Capstone3
+ *
+ * Main module of the application.
+ */
+angular
+  .module('Capstone3', [
+    'ngAnimate',
+    'ngAria',
+    'ngCookies',
+    'ngMessages',
+    'ngResource',
+    'ngRoute',
+    'ngSanitize',
+    'ngStorage',
+    'ngTouch'
+
+  ])
+  .config(["$routeProvider", function ($routeProvider) {
+    $routeProvider
+      .when('/', {
+        templateUrl: 'views/main.html',
+        controller: 'MainCtrl',
+        controllerAs: 'main'
+      })
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'AboutCtrl',
+        controllerAs: 'about'
+      })
+      .when('/savedWords', {
+        templateUrl: 'views/savedwords.html',
+        controller: 'SavedwordsCtrl',
+        controllerAs: 'savedWords'
+      })
+      .when('/savedWords', {
+        templateUrl: 'views/savedwords.html',
+        controller: 'SavedwordsCtrl',
+        controllerAs: 'savedWords'
+      })
+      .when( "/location", {} )
+      .otherwise({
+        redirectTo: '/'
+      });
+  }]);
+
 angular.module('projectsApp').run(['$templateCache', function($templateCache) {
   'use strict';
 
@@ -252,12 +226,12 @@ angular.module('projectsApp').run(['$templateCache', function($templateCache) {
 
 
   $templateCache.put('views/main.html',
-    "<div> <label class=\"wordlookup\">Look up.... <input type=\"text\" name=\"word\" method=\"get\" minlength=\"2\" ng-model=\"word\" placeholder=\"What's the Word?\" required> <button class=\"lookupbutton\" ng-click=\"findWords()\">Look it up!</button> </label> </div> <div ng-if=\"searchQuery\"> <p class=\"lead\">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p> </div> <br> <div> <ul class=\"wordresults\"> <p ng-animate=\"animate\" ng-repeat=\"word in wordsFound.list | limitTo: 5\"> <strong>{{word.word}}</strong> | {{word.word}}, {{word.definition}} <br> {{word.definition[0].example}} {{word.word[0].thumbsup}} <br> {{word.word[0].thumbsdown}} {{word.thumbnail}} <button class=\"saveword\" id=\"btn btn-lg btn-primary\" ng-click=\"saveWord(word)\">Add to favorite words!</button> <div ng-if=\"storage.savedWords\"> <h2>Favorite Words</h2> <ul class=\"saved-words-list\"> <li ng-repeat=\"word in storage.savedWords\"> <a ng-href=\"/#/wordSearch/{{word.word}}\" class=\"btn btn-lg btn-primary\">{{word.word}}</a> </li> </ul> <a href=\"ndex.html\" class=\"backtosearch\">Clear </a> </div></p></ul></div>"
+    "<div> <label class=\"wordlookup\">Look up.... <!-- <input type=\"text\" name=\"word\" method=\"get\" minlength=\"2\" ng-model=\"word\" placeholder=\"What's the Word?\" required></input> --> <input type=\"text\" ng-model=\"word\" placeholder=\"What's the Word?\"> <a class=\"clear\" ng-click=\"word = null\"> <span class=\"glyphicon glyphicon-remove\"></span> </a> <button class=\"lookupbutton\" ng-click=\"findWords()\">Look it up!</button> </label> </div> <div ng-if=\"searchQuery\"> <p class=\"lead\">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p> </div> <br> <ul class=\"wordresults\"> <p ng-animate=\"animate\" ng-repeat=\"word in wordsFound.list | limitTo: 5\"> <strong>{{word.word}}</strong> | {{word.word}}, {{word.definition}} <br> {{word.definition[0].example}} {{word.word[0].thumbsup}} <br> {{word.word[0].thumbsdown}} {{word.thumbnail}} <button class=\"saveword\" id=\"btn btn-lg btn-primary\" ng-click=\"saveWord(word)\">Add to favorite words!</button> <div ng-if=\"storage.savedWords\"> <h2>Favorite Words</h2> <ul class=\"saved-words-list\"> <li ng-repeat=\"word in storage.savedWords\"> <a ng-href=\"/#/wordSearch/{{word.word}}\" class=\"btn btn-lg btn-primary\">{{word.word}}</a> </li> <p class=\"save-button-container\"> <button class=\"btn btn-xs btn-default\" ng-click=\"unsaveWord(word)\">Unsave</button></p> </ul> </div></p></ul>"
   );
 
 
   $templateCache.put('views/savedwords.html',
-    "<div> <ul class=\"savedwordresults\"> <a href=\"#/index.html\" class=\"backtosearch\">Back to Search </a> <br> <br> <li ng-repeat=\"word in storage.savedWords | limitTo: 10\"> <strong>{{word.word}}</strong> | {{word.word}}, {{word.definition}} <br> {{word.definition.example}} {{word.word[0].thumbsup}} <br> {{word.word[0].thumbsdown}} {{word.thumbnail}} <br> </li></ul> </div>"
+    "<div> <ul class=\"savedwordresults\"> <a href=\"#/index.html\" class=\"backtosearch\">Back to Search </a> <br> <br> <a class=\"clear\" ng-click=\"word = null\"> <span class=\"glyphicon glyphicon-remove\"></span> </a> <li ng-repeat=\"word in storage.savedWords | limitTo: 10\"> <strong>{{word.word}}</strong> | {{word.word}} {{word.definition}} <br> {{word.definition.example}} {{word.word[0].thumbsup}} <br> {{word.word[0].thumbsdown}} {{word.thumbnail}} <br> </li></ul> </div>"
   );
 
 
