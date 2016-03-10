@@ -23,10 +23,8 @@ angular.module('Capstone3')
           params: {
             query: ''
           },
-        isArray: false
+          isArray: false
         }
-      }
-    );
-
-  });
+      });
+    });
 
