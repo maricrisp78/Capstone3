@@ -1,4 +1,18 @@
+<div>
+  <label class="wordlookup">Look up.... 
+    <!-- <input type="text" name="word" method="get" minlength="2" ng-model="word" placeholder="What's the Word?" required></input> -->
+
+    <input type="text" ng-model="word" placeholder="What's the Word?"/>
+    <a class="clear" ng-click="word = null">
+      <span class="glyphicon glyphicon-remove"></span>
+    </a>
+
+    <button class="lookupbutton" ng-click="findWords()">Look it up!</button>
+
+  </label>
+</div>  
  
+
 
 <div>
   <label class="wordlookup">Look up.... 
