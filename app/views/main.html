@@ -2,7 +2,7 @@
 
 <div>
   <label class="wordlookup">Look up.... 
-    <!-- <input type="text" name="word" method="get" minlength="2" ng-model="word" placeholder="What's the Word?" required></input> -->
+
 
     <input type="text" ng-model="word" placeholder="What's the Word?"/>
     <a class="clear" ng-click="word = null">
@@ -15,8 +15,6 @@
 </div>  
 
 
-
-
 <div ng-if="searchQuery">
 
   <p class="lead">{{wordsFound.count}} words found matching the query: {{searchQuery}}. </p>
@@ -24,13 +22,15 @@
 </div>
 <br>
 
+
+
+
   <ul class="wordresults">
 
-
     <p ng-animate="animate" ng-repeat="word in wordsFound.list | limitTo: 5">
-     <strong>{{word.word}}</strong> | 
+     <strong>{{word.word}}</strong> 
 
-     {{word.word}},
+     {{list.word}}
      {{word.definition}} <br>
      {{word.definition[0].example}} 
      {{word.word[0].thumbsup}}  <br>
@@ -38,8 +38,13 @@
      {{word.thumbnail}}      
 
 
+   
 
-     <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button> 
+
+
+     <button class="saveword" id="btn btn-lg btn-primary" ng-click="saveWord(word)">Add to favorite words!</button>  <a class="clear" ng-click="word = null">
+      <span class="glyphicon glyphicon-remove"></span>
+    </a>
 
 
 
