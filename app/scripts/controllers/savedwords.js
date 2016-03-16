@@ -4,7 +4,7 @@
  * @ngdoc function
  * @name Capstone3.controller:SavedwordsCtrl
  * @description
- * # SavedwordssCtrl
+ * # SavedwordsCtrl
  * Controller of the Capstone3
  */
 angular.module('Capstone3')
