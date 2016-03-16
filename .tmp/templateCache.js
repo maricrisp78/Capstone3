@@ -1,4 +1,4 @@
-angular.module('angularJsApp').run(['$templateCache', function($templateCache) {
+angular.module('Capstone3').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('views/about.html',

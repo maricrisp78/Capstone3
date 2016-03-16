@@ -368,7 +368,7 @@ sass: {
     ngtemplates: {
       dist: {
         options: {
-          module: 'angularJsApp',
+          module: 'Capstone3',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
