@@ -1,4 +1,4 @@
-angular.module('projectsApp').run(['$templateCache', function($templateCache) {
+angular.module('angularJsApp').run(['$templateCache', function($templateCache) {
   'use strict';
 
   $templateCache.put('views/about.html',

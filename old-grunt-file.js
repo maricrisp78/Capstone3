@@ -1,4 +1,4 @@
-// Generated on 2015-10-20 using generator-angular 0.12.1
+// Generated on 2016-02-12 using generator-angular 0.15.1
 'use strict';
 
 // # Globbing
@@ -13,12 +13,12 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
 
   // Automatically load required Grunt tasks
-require('jit-grunt')(grunt, {
+  require('jit-grunt')(grunt, {
     useminPrepare: 'grunt-usemin',
     ngtemplates: 'grunt-angular-templates',
     cdnify: 'grunt-google-cdn',
     buildcontrol: 'grunt-build-control'
-});
+  });
 
   // Configurable paths for the application
   var appConfig = {
@@ -26,7 +26,8 @@ require('jit-grunt')(grunt, {
     dist: 'dist'
   };
 
-// Define the configuration for all the tasks
+ 
+  // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
@@ -49,28 +50,26 @@ require('jit-grunt')(grunt, {
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
-
       bower: {
         files: ['bower.json'],
         tasks: ['wiredep']
       },
       js: {
         files: ['<%= yeoman.app %>/scripts/{,*/}*.js'],
-        tasks: ['newer:jshint:all'],
+        tasks: ['newer:jshint:all', 'newer:jscs:all'],
         options: {
           livereload: '<%= connect.options.livereload %>'
         }
       },
       jsTest: {
         files: ['test/spec/{,*/}*.js'],
-        tasks: ['newer:jshint:test', 'karma']
+        tasks: ['newer:jshint:test', 'newer:jscs:test', 'karma']
       },
-      
       sass: {
-      files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-      tasks: ['sass:server', 'autoprefixer']
-      },
-      
+        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        tasks: ['sass:server', 'autoprefixer']
+     },
+
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -137,7 +136,7 @@ require('jit-grunt')(grunt, {
       }
     },
 
-    // Make sure code styles are up to par and there are no obvious mistakes
+    // Make sure there are no obvious mistakes
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -153,6 +152,23 @@ require('jit-grunt')(grunt, {
         options: {
           jshintrc: 'test/.jshintrc'
         },
+        src: ['test/spec/{,*/}*.js']
+      }
+    },
+
+    // Make sure code styles are up to par
+    jscs: {
+      options: {
+        config: '.jscsrc',
+        verbose: true
+      },
+      all: {
+        src: [
+          'Gruntfile.js',
+          '<%= yeoman.app %>/scripts/{,*/}*.js'
+        ]
+      },
+      test: {
         src: ['test/spec/{,*/}*.js']
       }
     },
@@ -173,13 +189,15 @@ require('jit-grunt')(grunt, {
     },
 
     // Add vendor prefixed styles
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 1 version']
+        processors: [
+          require('autoprefixer-core')({browsers: ['last 1 version']})
+        ]
       },
       server: {
         options: {
-          map: true,
+          map: true
         },
         files: [{
           expand: true,
@@ -224,34 +242,35 @@ require('jit-grunt')(grunt, {
         src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
+    }, 
+
+    // Compiles Sass to CSS and generates necessary files if requested
+     sass: {
+        options: {
+            includePaths: [
+                'bower_components'
+            ]
+        },
+        dist: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/styles',
+                src: ['*.scss'],
+                dest: '.tmp/styles',
+                ext: '.css'
+            }]
+        },
+        server: {
+            files: [{
+                expand: true,
+                cwd: '<%= yeoman.app %>/styles',
+                src: ['*.scss'],
+                dest: '.tmp/styles',
+                ext: '.css'
+            }]
+        }
     },
 
-// Compiles Sass to CSS and generates necessary files if requested
-sass: {
-    options: {
-        includePaths: [
-            'bower_components'
-        ]
-    },
-    dist: {
-        files: [{
-            expand: true,
-            cwd: '<%= yeoman.app %>/styles',
-            src: ['*.scss'],
-            dest: '.tmp/styles',
-            ext: '.css'
-        }]
-    },
-    server: {
-        files: [{
-            expand: true,
-            cwd: '<%= yeoman.app %>/styles',
-            src: ['*.scss'],
-            dest: '.tmp/styles',
-            ext: '.css'
-        }]
-    }
-},
     // Renames files for browser caching purposes
     filerev: {
       dist: {
@@ -287,7 +306,7 @@ sass: {
     usemin: {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
-      // js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
+      js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
@@ -368,7 +387,7 @@ sass: {
     ngtemplates: {
       dist: {
         options: {
-          module: 'angularJsApp',
+          module: 'projectsApp',
           htmlmin: '<%= htmlmin.dist.options %>',
           usemin: 'scripts/scripts.js'
         },
@@ -408,11 +427,9 @@ sass: {
           dest: '<%= yeoman.dist %>',
           src: [
             '*.{ico,png,txt}',
-            '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
-            'styles/fonts/{,*/}*.*',
-            // 'scripts/*/**'
+            'styles/fonts/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -434,24 +451,22 @@ sass: {
       }
     },
 
-
-// Run some tasks in parallel to speed up the build process
-concurrent: {
-  server: [
-    'sass:server',
-    'copy:styles'
-  ],
-  test: [
-    'copy:styles'
-  ],
-  dist: [
-    'sass',
-    'copy:styles',
-    'imagemin',
-    'svgmin'
-  ]
-},
-
+    // Run some tasks in parallel to speed up the build process
+    concurrent: {
+      server: [
+        'sass:server',
+        'copy:styles'
+      ],
+      test: [
+        'copy:styles'
+      ],
+      dist: [
+        'sass',
+        'copy:styles',
+        'imagemin',
+        'svgmin'
+      ]
+    },
 
     // Test settings
     karma: {
@@ -472,7 +487,7 @@ concurrent: {
       'clean:server',
       'wiredep',
       'concurrent:server',
-      'autoprefixer:server',
+      'postcss:server',
       'connect:livereload',
       'watch'
     ]);
@@ -487,7 +502,7 @@ concurrent: {
     'clean:server',
     'wiredep',
     'concurrent:test',
-    'autoprefixer',
+    'postcss',
     'connect:test',
     'karma'
   ]);
@@ -497,7 +512,7 @@ concurrent: {
     'wiredep',
     'useminPrepare',
     'concurrent:dist',
-    'autoprefixer',
+    'postcss',
     'ngtemplates',
     'concat',
     'ngAnnotate',
@@ -512,6 +527,7 @@ concurrent: {
 
   grunt.registerTask('default', [
     'newer:jshint',
+    'newer:jscs',
     'test',
     'build'
   ]);
