@@ -16,7 +16,7 @@ angular.module('Capstone3')
 
 
     $scope.findWords = function(){
-    	console.log('clicking here');
+        console.log('clicking here');
         $scope.wordsFound = wordSearch.find({
              query: $scope.word
         });
@@ -58,6 +58,5 @@ angular.module('Capstone3')
     };
 
   });
-
 
 

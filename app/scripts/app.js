@@ -38,11 +38,6 @@ angular
         controller: 'SavedwordsCtrl',
         controllerAs: 'savedWords'
       })
-      .when('/savedWords', {
-        templateUrl: 'views/savedwords.html',
-        controller: 'SavedwordsCtrl',
-        controllerAs: 'savedWords'
-      })
       .when( "/location", {} )
       .otherwise({
         redirectTo: '/'

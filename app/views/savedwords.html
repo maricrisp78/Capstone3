@@ -17,7 +17,7 @@
 
       
 
-          <li ng-repeat="word in storage.savedWords | limitTo: 10">
+          <li ng-repeat="word in storage.savedWords track by $index | limitTo: 10">
              <strong>{{word.word}}</strong>
 
 
@@ -29,6 +29,9 @@
             {{word.word[0].thumbsdown}} 
             {{word.thumbnail}} <br>
       
+
+          </li>
+
         </ul>
 
 
